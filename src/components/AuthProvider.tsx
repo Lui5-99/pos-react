@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { checkAuth, loginSuccess } from "../store/slices/authSlice";
+import { loginSuccess } from "../store/slices/authSlice";
 import { authAPI } from "../services/api";
 
 interface AuthProviderProps {

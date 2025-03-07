@@ -5,7 +5,6 @@ import {
   Grid,
   Card,
   CardContent,
-  CardMedia,
   Button,
 } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";

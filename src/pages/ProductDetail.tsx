@@ -19,7 +19,6 @@ import { ShoppingCart as CartIcon } from "@mui/icons-material";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../store";
 import { addToCart } from "../store/slices/cartSlice";
-import { Product } from "../types";
 
 const ProductDetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -31,7 +30,7 @@ const ProductDetail = () => {
   const [error, setError] = useState("");
   const [addedToCart, setAddedToCart] = useState(false);
 
-  const product = products.find((p) => p.id === id);
+  const product = products.find((p) => p._id === id);
 
   useEffect(() => {
     if (!product) {

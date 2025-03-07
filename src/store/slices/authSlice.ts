@@ -1,6 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { AuthState, User } from "../../types";
-import { authAPI } from "../../services/api";
 import { clearCart } from "./cartSlice";
 
 const initialState: AuthState = {
