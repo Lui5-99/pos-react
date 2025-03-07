@@ -95,7 +95,7 @@ export const authAPI = {
   },
 
   getProfile: async (): Promise<User> => {
-    const response = await axios.get(`${API_URL}/auth/profile`, {
+    const response = await axios.get(`${API_URL}/user/profile`, {
       headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
     });
     return response.data;
@@ -105,7 +105,7 @@ export const authAPI = {
     name: string;
     email: string;
   }): Promise<User> => {
-    const response = await axios.put(`${API_URL}/auth/profile`, data, {
+    const response = await axios.put(`${API_URL}/user/profile`, data, {
       headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
     });
     return response.data;
@@ -115,13 +115,13 @@ export const authAPI = {
     currentPassword: string;
     newPassword: string;
   }): Promise<void> => {
-    await axios.put(`${API_URL}/auth/password`, data, {
+    await axios.put(`${API_URL}/user/password`, data, {
       headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
     });
   },
 
   deleteAccount: async (): Promise<void> => {
-    await axios.delete(`${API_URL}/auth/account`, {
+    await axios.delete(`${API_URL}/user/account`, {
       headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
     });
   },
